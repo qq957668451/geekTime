@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # geektime01
 
 ## Project setup
@@ -27,3 +28,7 @@ yarn run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# greekTime
+vue+TypeScript
+>>>>>>> 1898ce661fc45b34c85824e90a96c27403bb2fed
