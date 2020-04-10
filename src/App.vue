@@ -2,22 +2,30 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    {{ msg }}
+    <router-view></router-view>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "./components/HelloWorld.vue";
+import HelloWorld from "./common/components/HelloWorld.vue";
+import moment from "moment";
 
 @Component({
   components: {
-    HelloWorld,
-  },
+    HelloWorld
+  }
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  msg = "";
+  mounted() {
+    this.msg = moment().format("YYYY-MM-DD");
+  }
+}
 </script>
 
-<style>
+<style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,5 +33,8 @@ export default class App extends Vue {}
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  img {
+    width: 200px;
+  }
 }
 </style>
